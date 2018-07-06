@@ -7,6 +7,5 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/bbc/nightwatch-commands.git"
-    },
-    "types": "index"
+    }
 }
