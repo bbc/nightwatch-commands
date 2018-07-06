@@ -1,5 +1,5 @@
 {
-    "name": "nightwatch-commands",
+    "name": "@bbc/nightwatch-commands",
     "version": "1.0.0",
     "description": "Basic Nightwatch Commands",
     "license": "MIT",
