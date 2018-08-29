@@ -7,8 +7,12 @@ exports.command = function (selectors) {
   // the end of the html code)
   self.source(function (result) {
     selectors.forEach (function (selector) {
-      var regex = new RegExp(selector + '\/[0-9]*.[0-9]*.[0-9]*-?[0-9]*', 'gmi');
-      console.log(result.value.match(regex)[0]);
+      try{ 
+        var regex = new RegExp(selector + '\/[0-9]*.[0-9]*.[0-9]*-?[0-9]*', 'gmi');
+        console.log(result.value.match(regex)[0]);
+      } catch (e) {
+        console.log(e);
+      }
     });
   });
 };

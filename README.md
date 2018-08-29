@@ -5,6 +5,7 @@
 * [screenSize](#screensize)
 * [setCheckbox](#setcheckbox)
 * [setDropdown](#setdropdown)
+* [waitForUrlToEqual](#waitforurltoequal)
 
 ## getVersionNumbers
 
@@ -93,4 +94,25 @@ It clicks the dropdown menu to show the options and then selects the appropriate
 
 ```
 browser.page.object.setDropdown('bodyColor', '#77BC30')
+```
+
+## waitForUrlToEqual
+
+### Purpose
+
+This provides a way of getting the browser to wait until the URL matches the one we expected
+
+### Parameters
+
+* The ```waitForUrlToEqual(url)``` keyword has one required parameters:
+  * ```url``` - is the one we want to match against
+
+### How it works
+
+It pauses the test until the url is equal to the one we want
+
+### Example
+
+```
+browser.waitForUrlToEqual('http://www.google.com')
 ```
