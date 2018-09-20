@@ -1,10 +1,54 @@
 # Keywords 
 
+* [dontRunOn](#dontrunon)
 * [elementCount](#elementcount)
 * [getVersionNumbers](#getversionnumbers)
 * [screenSize](#screensize)
 * [setCheckbox](#setcheckbox)
 * [setDropdown](#setdropdown)
+
+## dontRunOn
+
+### Purpose
+
+Add the ability to exit a test early if we do not want to run on a specific environment
+
+### Parameters
+
+The ```dontRunOn(['environment'])``` keyword accepts an array of environments such as ```int```,```test``` or ```live```.
+
+### How it works
+
+It compares the array to the current environment it is testing against (Usually provided by the ```ENV``` variable in the ```.env``` file)
+
+### Example
+
+```
+browser.page.<page>.dontRunOn(['live']);
+```
+
+## elementCount
+
+### Purpose
+
+Read the number of elements that match a certain criteria
+
+### Parameters
+
+* The ```elementCount(locateStrategy, selector, count)``` keyword has three required parameters:
+  * ```locateStrategy``` - can be something like ```css selector``` or ```xpath``` and is based on the selector
+  * ```selector``` - is way in which we identify the element 
+  * ```count``` - is the number of items that we are expecting there to be
+
+### How it works
+
+It checks the number of elements which match the selector and if it does not match the count given then it will fail the assertion.
+
+### Example
+
+```
+browser.page.<page>.assert.elementCount('css selector', 'ol li', 7);
+```
 
 ## getVersionNumbers
 
