@@ -15,7 +15,7 @@ exports.command = function (locateStrategy, selector, value) {
 
     // Assert that we have set the checkbox to the correct value
     self.elementIdSelected(response.value.ELEMENT, function (result) {
-      self.assert.ok(selector, ' attempted to set to ' + value);
+      self.assert.ok(selector, 'attempted to set to ' + value);
     });
   });
 };
