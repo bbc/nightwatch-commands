@@ -11,7 +11,7 @@ exports.command = function (selectors) {
         var regex = new RegExp(selector + '\/[0-9]*.[0-9]*.[0-9]*-?[0-9]*', 'gmi');
         console.log(result.value.match(regex)[0]);
       } catch (e) {
-        console.log('The', selector, 'version number could not be found. This is either due to a catastophic failure or running Chrome Headless');
+        console.log('The', selector, 'version number could not be found. \033[0m\033[1;33mAre you running Chrome Headless?');
       }
     });
   });
