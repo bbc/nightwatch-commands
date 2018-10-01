@@ -7,11 +7,11 @@ exports.command = function (selectors) {
   // the end of the html code)
   self.source(function (result) {
     selectors.forEach (function (selector) {
-      try{ 
+      try { 
         var regex = new RegExp(selector + '\/[0-9]*.[0-9]*.[0-9]*-?[0-9]*', 'gmi');
         console.log(result.value.match(regex)[0]);
       } catch (e) {
-        console.log('The', selector, 'version number could not be found. \033[0m\033[1;33mAre you running Chrome Headless?');
+        console.log('The', selector, 'version number could not be found. \033[0m\033[1;33mAre you running Chrome Headless?\u001b[0m');
       }
     });
   });
