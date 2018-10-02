@@ -1,31 +1,10 @@
 # Keywords 
 
-* [dontRunOn](#dontrunon)
 * [elementCount](#elementcount)
 * [getVersionNumbers](#getversionnumbers)
 * [screenSize](#screensize)
 * [setCheckbox](#setcheckbox)
 * [setDropdown](#setdropdown)
-
-## dontRunOn
-
-### Purpose
-
-Add the ability to exit a test early if we do not want to run on a specific environment
-
-### Parameters
-
-The ```dontRunOn(['environment'])``` keyword accepts an array of environments such as ```int```,```test``` or ```live```.
-
-### How it works
-
-It compares the array to the current environment it is testing against (Usually provided by the ```ENV``` variable in the ```.env``` file)
-
-### Example
-
-```
-browser.page.<page>.dontRunOn(['live']);
-```
 
 ## elementCount
 
