@@ -37,16 +37,16 @@ This extracts the version number of a product from the HTML source
 
 ### Parameters
 
-The ```getVersionNumber(['productName'])``` keyword accepts an array of productNames such as ```orbit``` or ```searchbox-app```.
+The ```getVersionNumber(['name'])``` keyword accepts an array of names.
 
 ### How it works
 
-It reads in the HTML source of a page and then parses it to look for the ```productName``` which is of the format ```productName/xx.yy.zz```. Where ```xx.yy.zz``` are the version numbers.
+It reads in the HTML source of a page and then parses it to look for the ```name``` which is of the format ```name/xx.yy.zz```. Where ```xx.yy.zz``` are the version numbers.
 
 ### Example
 
 ```
-browser.page.<page>.getVersionNumbers(['productName']);
+browser.page.<page>.getVersionNumbers(['name']);
 ```
 
 ## screenSize
@@ -93,7 +93,7 @@ It checks the current value of the checkbox and if it does not match the value g
 ### Example
 
 ```
-browser.page.object.setCheckbox('css selector', '[name="fig_uk"]', true)
+browser.page.object.setCheckbox('css selector', '<checkbox selector>', true)
 ```
 
 ## setDropdown
