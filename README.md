@@ -2,6 +2,7 @@
 
 * [elementCount](#elementcount)
 * [getVersionNumbers](#getversionnumbers)
+* [hideElement](#hideElement)
 * [screenSize](#screensize)
 * [setCheckbox](#setcheckbox)
 * [setDropdown](#setdropdown)
@@ -47,6 +48,26 @@ It reads in the HTML source of a page and then parses it to look for the ```name
 
 ```
 browser.page.<page>.getVersionNumbers(['name']);
+```
+
+## hideElement
+
+### Purpose
+
+This can hide an element from the page and is useful for when performing screen comparisons and ignoring certain sections of the page
+
+### Parameters
+
+The ```hideElement(elementId)``` keyword accepts an element ID.
+
+### How it works
+
+It edits the styling of the HTML in question to turn the opacity to full, so it is transparent.
+
+### Example
+
+```
+browser.page.<page>.hideElement(elementId);
 ```
 
 ## screenSize
