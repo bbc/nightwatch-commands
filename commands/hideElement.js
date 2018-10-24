@@ -177,6 +177,5 @@ exports.command = function (selector) {
 
   // Execute the javascript to hide the element
   var javascript = 'document.getElementById("' + selElement + '").style.opacity = "0";';
-  console.log(javascript);
   self.execute(javascript, [], function () { console.log(' \033[0;32m\u2714\u001b[0m Successfully hidden ' + orginalSelElement + '.'); });
 };
