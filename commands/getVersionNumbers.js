@@ -8,7 +8,7 @@ exports.command = function (selectors) {
   self.source(function (result) {
     selectors.forEach (function (selector) {
       try { 
-        var regex = new RegExp(selector + '\/[0-9]*.[0-9]*.[0-9]*-?[0-9]*', 'gmi');
+        var regex = new RegExp(selector + '\/[0-9A-Fa-f.-]*', 'gmi');
         console.log(result.value.match(regex)[0]);
       } catch (e) {
         console.log('The', selector, 'version number could not be found. \033[0m\033[1;33mAre you running Chrome Headless?\u001b[0m');
